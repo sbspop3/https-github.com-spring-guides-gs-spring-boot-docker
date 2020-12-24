@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: sbspophttpsgithubcomspringguidesgsspringbootdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sbspophttpsgithubcomspringguidesgsspringbootdocker
+  template:
+    metadata:
+      labels:
+        app: sbspophttpsgithubcomspringguidesgsspringbootdocker 
+    spec:
+      containers:
+        - name: sbspophttpsgithubcomspringguidesgsspringbootdocker 
+          image: azdemo001.azurecr.io/sbspophttpsgithubcomspringguidesgsspringbootdocker
+          ports:
+          - containerPort: 80
